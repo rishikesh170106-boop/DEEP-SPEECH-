@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Large data files (Raw & Interim audio datasets)
+data/raw/
+data/interim/
+data/processed/*
+!data/processed/tef_08318_01333265498.wav
+!data/processed/tef_05181_00262763772.wav
+!data/processed/tef_05994_01436559908.wav
+!data/processed/tef_05994_00821586397.wav
+*.mp3
+*.flac
+*.zip
+*.tar.gz
+
+# Model weights and checkpoints (Large binaries > 100MB)
+artifacts/models/
+artifacts/checkpoints/
+artifacts/tokenizers/
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# Hugging Face & pip cache
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# VS Code & IDEs
+.vscode/
+.idea/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Predictions output from evaluation sweeps
+reports/predictions/
+
+# Experiments outputs
+experiments/manifests/

@@ -1,0 +1,48 @@
+# data.yaml — Dataset configuration for FairVoice-Lite
+
+dataset:
+  name: SLR66_Telugu_Female
+  source_url: https://www.openslr.org/resources/66/te_in_female.zip
+  raw_archive: data/raw/te_in_female.zip
+  raw_dir: data/raw/
+  interim_dir: data/interim/
+  processed_dir: data/processed/
+  metadata_dir: data/metadata/
+
+audio:
+  target_sample_rate: 16000
+  target_channels: 1          # mono
+  max_duration_seconds: 30.0
+  min_duration_seconds: 0.1
+
+splits:
+  train_ratio: 0.80
+  val_ratio: 0.10
+  test_ratio: 0.10
+  random_seed: 42
+
+  # Use these if recovering original SLR66 splits
+  use_original_splits: true
+  original_train_count: 1835
+  original_val_count: 229
+  original_test_count: 230
+
+text:
+  unicode_normalization: NFC
+  language: te          # ISO 639-1 Telugu
+  word_delimiter: "|"
+
+metadata:
+  train_csv: data/metadata/train.csv
+  val_csv: data/metadata/validation.csv
+  test_csv: data/metadata/test.csv
+  all_csv: data/metadata/all.csv
+
+  columns:
+    - file_id
+    - transcript
+    - audio_path
+    - sample_rate
+    - duration
+    - processed_audio_path
+    - split

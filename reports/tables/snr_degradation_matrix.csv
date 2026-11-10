@@ -1,0 +1,6 @@
+condition,snr_db,whisper_wer,whisper_insertions,clean_ctc_wer,clean_ctc_insertions,robust_ctc_wer,robust_ctc_insertions,robust_ctc_exact_match
+Clean,Clean,153.33,641,100.0,0,100.0,0,0.0
+20dB_SNR,20 dB,138.61,482,100.0,0,100.0,0,0.0
+10dB_SNR,10 dB,125.48,412,100.0,0,100.0,0,0.0
+5dB_SNR,5 dB,135.52,447,100.0,0,100.0,0,0.0
+0dB_SNR,0 dB,123.55,395,100.0,0,100.0,0,0.0

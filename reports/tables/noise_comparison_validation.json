@@ -1,0 +1,30 @@
+[
+  {
+    "condition": "20dB_SNR",
+    "wer": 138.61,
+    "cer": 160.6147,
+    "exact_match_accuracy": 0.0,
+    "model_id": "openai/whisper-small"
+  },
+  {
+    "condition": "10dB_SNR",
+    "wer": 125.4826,
+    "cer": 166.0785,
+    "exact_match_accuracy": 0.0,
+    "model_id": "openai/whisper-small"
+  },
+  {
+    "condition": "5dB_SNR",
+    "wer": 135.5212,
+    "cer": 158.0535,
+    "exact_match_accuracy": 0.0,
+    "model_id": "openai/whisper-small"
+  },
+  {
+    "condition": "0dB_SNR",
+    "wer": 123.5521,
+    "cer": 163.2328,
+    "exact_match_accuracy": 0.0,
+    "model_id": "openai/whisper-small"
+  }
+]

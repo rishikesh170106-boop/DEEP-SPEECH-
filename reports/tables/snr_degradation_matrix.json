@@ -1,0 +1,57 @@
+[
+  {
+    "condition":"Clean",
+    "snr_db":"Clean",
+    "whisper_wer":153.33,
+    "whisper_insertions":641,
+    "clean_ctc_wer":100.0,
+    "clean_ctc_insertions":0,
+    "robust_ctc_wer":100.0,
+    "robust_ctc_insertions":0,
+    "robust_ctc_exact_match":0.0
+  },
+  {
+    "condition":"20dB_SNR",
+    "snr_db":"20 dB",
+    "whisper_wer":138.61,
+    "whisper_insertions":482,
+    "clean_ctc_wer":100.0,
+    "clean_ctc_insertions":0,
+    "robust_ctc_wer":100.0,
+    "robust_ctc_insertions":0,
+    "robust_ctc_exact_match":0.0
+  },
+  {
+    "condition":"10dB_SNR",
+    "snr_db":"10 dB",
+    "whisper_wer":125.48,
+    "whisper_insertions":412,
+    "clean_ctc_wer":100.0,
+    "clean_ctc_insertions":0,
+    "robust_ctc_wer":100.0,
+    "robust_ctc_insertions":0,
+    "robust_ctc_exact_match":0.0
+  },
+  {
+    "condition":"5dB_SNR",
+    "snr_db":"5 dB",
+    "whisper_wer":135.52,
+    "whisper_insertions":447,
+    "clean_ctc_wer":100.0,
+    "clean_ctc_insertions":0,
+    "robust_ctc_wer":100.0,
+    "robust_ctc_insertions":0,
+    "robust_ctc_exact_match":0.0
+  },
+  {
+    "condition":"0dB_SNR",
+    "snr_db":"0 dB",
+    "whisper_wer":123.55,
+    "whisper_insertions":395,
+    "clean_ctc_wer":100.0,
+    "clean_ctc_insertions":0,
+    "robust_ctc_wer":100.0,
+    "robust_ctc_insertions":0,
+    "robust_ctc_exact_match":0.0
+  }
+]

@@ -1,0 +1,53 @@
+# model.yaml — Model configuration for FairVoice-Lite
+
+# ── Model A: Baseline (historical reference from Colab) ──────────────────────
+baseline:
+  name: indic-transcribe-core
+  hf_id: bodhan-ai/indic-transcribe-core
+  revision: e083ab7dfeeddcb5c0b4a2d7df53f53e7b0f1537
+  architecture: IndicCanaryForConditionalGeneration
+  parameters_approx: 1.22B
+  device: cuda
+  dtype: float16
+  max_seconds: 45.0
+  notes: >
+    Historical baseline evaluated in Google Colab.
+    Verify memory requirements before loading on RTX 4050 (6 GB VRAM).
+
+# ── Model B: Whisper (secondary baseline) ────────────────────────────────────
+whisper:
+  name: whisper-small
+  hf_id: openai/whisper-small
+  parameters_approx: 244M
+  language: te
+  task: transcribe
+  notes: >
+    Previously produced Devanagari phonetic output instead of Telugu.
+    Verify forced-token configuration before use.
+
+# ── Model C: Telugu Wav2Vec2 CTC (primary fine-tuning target) ─────────────────
+wav2vec2_telugu:
+  name: wav2vec2-clsril-telugu-init
+  hf_id: biswa921/wav2vec2-clsril-23-10k-telugu-init
+  architecture: Wav2Vec2ForCTC
+  parameters_approx: 94.4M
+  vocab_size: 83
+  sample_rate: 16000
+  blank_token_id: 1
+  unk_token_id: 3
+  word_delimiter: "|"
+  device: cuda
+  dtype: float32         # Use float32 for CTC stability; fp16 if VRAM pressure
+  freeze_feature_extractor: true
+  notes: >
+    Primary model for local CTC fine-tuning.
+    Preferred due to smaller size (fits RTX 4050 6GB VRAM).
+
+# ── Model D: XLS-R (secondary experiment, optional) ──────────────────────────
+xlsr:
+  name: wav2vec2-xls-r-300m
+  hf_id: facebook/wav2vec2-xls-r-300m
+  parameters_approx: 315.5M
+  notes: >
+    Previous experiment produced blank predictions and backward-pass errors.
+    Do NOT use until Telugu CTC pipeline is stable.

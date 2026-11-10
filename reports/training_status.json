@@ -1,0 +1,11 @@
+{
+  "step": 570,
+  "max_steps": 570,
+  "percent": 100.0,
+  "epoch": 4.97,
+  "loss": "3.5463",
+  "eval_wer": "100.0%",
+  "speed_steps_sec": 2.05,
+  "elapsed_sec": 277.5,
+  "eta_str": "00m 00s"
+}
